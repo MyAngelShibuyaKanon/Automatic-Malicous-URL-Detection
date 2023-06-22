@@ -13,6 +13,7 @@ from urllib.parse import urlparse
 from ssl_checker import SSLChecker
 import json
 SSLChecker = SSLChecker()
+import time
 
 
 
@@ -26,6 +27,7 @@ class FeaturesFinder:
         self.urlparse = ""
         self.response = ""
         self.soup = ""
+        self.start_time = time.time()
 
         try:
             self.response = requests.get(url)
@@ -521,4 +523,6 @@ class FeaturesFinder:
             return 1
     
     def getFeaturesList(self):
+        print("Prediction processing finished --- %s seconds ---" % (time.time() - self.start_time))
         return self.features
+

@@ -1,3 +1,5 @@
+import os
+import sys
 from flask import Flask
 from flask import request
 from windows_toasts import WindowsToaster, ToastText1
@@ -5,11 +7,14 @@ import pickle
 from features import FeaturesFinder
 import time
 start_time = time.time()
-loaded_model = pickle.load(open('model.pkl', "rb"))
+bundle_dir = getattr(sys, '_MEIPASS', os.path.abspath(os.path.dirname(__file__)))
+path_to_pkl = os.path.abspath(os.path.join(bundle_dir, 'model.pkl'))
+loaded_model = pickle.load(open(path_to_pkl, "rb"))
 print("Model loading finished --- %s seconds ---" % (time.time() - start_time))
 toaster = WindowsToaster('Python')
 app = Flask(__name__)
 newToast = ToastText1()
+
 
 
 
