@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="I dont know what the fuck i am doing">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="style.css">
+        <title>I want coffee</title>
+    </head>
+
+     <body>  
+        <header>
+            <div>
+                <nav style="white-space: normal;" class="header">
+                <h1 style="padding-right:14%;float:left";>Pishn't - The light site checking extension</h1> 
+                <h1>
+                    <div style="float:inline-start">
+                        <a href="Main.html"; class="header-margin" class="child">                     Home</a>
+                        <a href="Settings.html"; class="header-margin" class="child">                 Settings</a>
+                        <a href="About.html"; class="header-margin" class="child">                    About</a>
+                        <a href="About.html"; target="_blank"; class="header-margin" class="child">   Github</a></h1>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+
+
+        <main>
+            <article style="padding-bottom: 90%; left:100%;max-width:max-content">
+                <div>
+                    <p><h1>
+                        Please input the URL here:
+                    </h1></p>
+                    <textarea id="URLInput">Put URL here</textarea>
+                    <button id="submit">submit</button>
+                    <h2>
+                        <span>Numbers in Domain: </span><span id = "Numbers"></span><br>
+                        <span>Periods in Domain: </span><span id = "Periods"></span><br>
+                        <span>Dashes in Domain: </span><span id = "Dashes"></span><br>
+                        <span>Weird Characters in Domain: </span><span id = "Weird"></span><br>
+                        <span>Length of Domain: </span><span  id = "Length"></span><br>
+                        <span>Https? </span><span  id = "https"></span><br>
+                        
+                    </h2>
+                    <h1><p><span>Pass? </span><span  id = "Pass"></span><br></p></h1>
+                    <h1><p><span>Score:</span><span  id = "Score">NaN</span><span>/8</span><br></p></h1>
+                    <p>5 and below is considered failed.</p>
+                    <p>criteria: 3 or more numbers in the domain will -1 point, 3 or more periods in the domain will -1 point</p>
+                    <p>1 or more dashes in the domain will -1 point, 1 or more special characters in the domain will -1 point</p>
+                    <p>26 or more characters in the domain will -1 point, not having html is -3 points</p>
+                </div>
+
+                <script src="index.js"></script>
+            </article>
+        </main>
+
+
+        <footer>
+            <div style="bottom:0%; width: 100%;text-align: center;">
+                <h1>Yokoso! Kira kira doki doki mochi mochi puyo puyo waku waku washoi!</h1>
+            </div>
+        </footer>
+     </body>
+
+</html>
